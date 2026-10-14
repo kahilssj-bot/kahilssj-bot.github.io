@@ -335,61 +335,59 @@ section{padding:80px 0}
     </div>
 
     <div class="veille-theme reveal">
-      <div class="exp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-      <div><small>Mon sujet de veille</small><b>La cybersécurité dans le secteur bancaire : phishing et authentification forte</b></div>
+      <div class="exp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+      <div><small>Mon sujet de veille</small><b>Les rançongiciels et la sauvegarde des données en entreprise</b></div>
     </div>
 
     <div class="block">
       <h3 class="sub-title reveal">Comprendre le sujet</h3>
-      <p class="lead-txt reveal">Les banques gèrent l’argent et les données de millions de clients : ce sont des <b>cibles privilégiées</b> pour les cybercriminels. Les attaques les plus fréquentes ne visent pas les serveurs de la banque mais <b>ses clients et ses salariés</b>, en les piégeant pour leur voler leurs identifiants. Pour se défendre, les banques s’appuient surtout sur <b>l’authentification forte</b> et la sensibilisation.</p>
+      <p class="lead-txt reveal">Un <b>rançongiciel</b> (ransomware) est un logiciel malveillant qui <b>chiffre les fichiers</b> d’une entreprise pour les rendre illisibles, puis exige une <b>rançon</b> pour les débloquer. C’est la menace la plus redoutée par les entreprises. La meilleure protection est simple : <b>avoir de bonnes sauvegardes</b>, pour pouvoir tout restaurer sans payer.</p>
 
       <div class="reveal">
         <details class="acc">
-          <summary><span class="n">01</span>Pourquoi les banques sont-elles autant visées ?<span class="plus">+</span></summary>
+          <summary><span class="n">01</span>Comment se déroule une attaque ?<span class="plus">+</span></summary>
           <div class="acc-body">
             <ul>
-              <li><b>L’argent :</b> un compte piraté permet de faire des virements frauduleux immédiatement.</li>
-              <li><b>Les données :</b> IBAN, identité, revenus… ces informations se revendent ou servent à de nouvelles arnaques.</li>
-              <li><b>La confiance :</b> une banque piratée perd la confiance de ses clients, ce qui est très grave pour elle.</li>
+              <li><b>L’entrée :</b> le plus souvent un mail piégé (phishing), un mot de passe volé ou une faille non corrigée.</li>
+              <li><b>La propagation :</b> le pirate se déplace dans le réseau et cherche les serveurs importants… et les sauvegardes, pour les détruire.</li>
+              <li><b>Le chiffrement :</b> d’un coup, tous les fichiers deviennent illisibles. Un message demande une rançon, souvent en bitcoins.</li>
+              <li><b>La double extorsion :</b> souvent, le pirate a aussi volé les données et menace de les publier.</li>
             </ul>
-            <div class="note"><b>À retenir :</b> les pirates attaquent souvent l’humain plutôt que la machine, car c’est plus simple que de percer les défenses d’une banque.</div>
+            <div class="note"><b>À retenir :</b> payer ne garantit pas de récupérer ses données, et l’ANSSI déconseille de payer.</div>
           </div>
         </details>
         <details class="acc">
-          <summary><span class="n">02</span>Le phishing, c’est quoi ?<span class="plus">+</span></summary>
+          <summary><span class="n">02</span>La règle de sauvegarde 3-2-1<span class="plus">+</span></summary>
           <div class="acc-body">
-            <p>Le <b>phishing</b> (ou hameçonnage) consiste à se faire passer pour un organisme de confiance, comme une banque, pour pousser la victime à donner ses informations.</p>
+            <p>C’est la règle de base recommandée par l’ANSSI pour ne jamais perdre ses données :</p>
             <ul>
-              <li><b>Par mail :</b> un faux mail de la banque avec un lien vers un faux site qui ressemble au vrai.</li>
-              <li><b>Par SMS (smishing) :</b> « Votre compte est bloqué, cliquez ici ».</li>
-              <li><b>Par téléphone (vishing) :</b> un faux conseiller appelle et demande de valider une opération ou de donner un code.</li>
-              <li><b>Par application :</b> un faux logiciel installé sur le téléphone qui vole les codes reçus par SMS.</li>
+              <li><b>3 copies</b> des données : l’original et deux sauvegardes.</li>
+              <li><b>2 supports différents :</b> par exemple un NAS et une bande ou un disque externe.</li>
+              <li><b>1 copie hors ligne</b> ou hors site : débranchée du réseau, donc impossible à chiffrer par le rançongiciel.</li>
             </ul>
-            <div class="note"><b>Les signes qui doivent alerter :</b> l’urgence, une adresse ou une URL bizarre, une demande de code ou de mot de passe. Une banque ne demande jamais ses codes par mail, SMS ou téléphone.</div>
+            <div class="note"><b>La version moderne, 3-2-1-1-0 :</b> on ajoute 1 copie <b>immuable</b> (impossible à modifier ou effacer pendant un temps donné) et <b>0 erreur</b> lors des tests de restauration.</div>
           </div>
         </details>
         <details class="acc">
-          <summary><span class="n">03</span>L’authentification forte, comment ça marche ?<span class="plus">+</span></summary>
+          <summary><span class="n">03</span>Les types de sauvegarde<span class="plus">+</span></summary>
           <div class="acc-body">
-            <p>Depuis la directive européenne <b>DSP2</b>, les banques doivent utiliser une <b>authentification forte</b> pour les connexions et les paiements en ligne. Il faut prouver son identité avec <b>au moins deux éléments différents</b> parmi trois catégories :</p>
             <ul>
-              <li><b>Ce que je sais :</b> un mot de passe ou un code.</li>
-              <li><b>Ce que je possède :</b> mon téléphone, qui reçoit une notification ou un code.</li>
-              <li><b>Ce que je suis :</b> mon empreinte digitale ou mon visage.</li>
+              <li><b>Complète :</b> on copie tout. C’est simple à restaurer mais long et volumineux.</li>
+              <li><b>Incrémentale :</b> on copie seulement ce qui a changé depuis la dernière sauvegarde. C’est rapide, mais la restauration demande toutes les sauvegardes de la chaîne.</li>
+              <li><b>Différentielle :</b> on copie ce qui a changé depuis la dernière sauvegarde complète. C’est un compromis entre les deux.</li>
             </ul>
-            <div class="note"><b>Exemple :</b> quand je paie en ligne, je dois valider le paiement dans l’application de ma banque avec mon empreinte. C’est le principe du <b>3D Secure</b>. Même si un pirate vole ma carte, il ne peut pas valider le paiement sans mon téléphone.</div>
+            <div class="note"><b>Exemple classique :</b> une sauvegarde complète le week-end, puis une incrémentale chaque soir de la semaine.</div>
           </div>
         </details>
         <details class="acc">
-          <summary><span class="n">04</span>Comment une banque se protège-t-elle ?<span class="plus">+</span></summary>
+          <summary><span class="n">04</span>Le rôle du technicien<span class="plus">+</span></summary>
           <div class="acc-body">
             <ul>
-              <li><b>Double authentification (MFA)</b> pour les clients et pour les salariés.</li>
-              <li><b>Sensibilisation</b> régulière des salariés et des clients aux arnaques.</li>
-              <li><b>Surveillance</b> des connexions et des opérations inhabituelles (heure, pays, montant).</li>
-              <li><b>Gestion des incidents :</b> chaque problème est suivi dans un outil de tickets pour être traité et tracé.</li>
-              <li><b>Mises à jour</b> régulières des postes et des équipements réseau pour corriger les failles.</li>
-              <li><b>Vérification du bénéficiaire :</b> depuis octobre 2025, la banque vérifie que le nom du bénéficiaire correspond bien à l’IBAN avant un virement.</li>
+              <li><b>Mettre en place les sauvegardes</b> en respectant la règle 3-2-1 et les automatiser.</li>
+              <li><b>Tester régulièrement la restauration :</b> une sauvegarde jamais testée ne vaut rien.</li>
+              <li><b>Rédiger une procédure de restauration</b> pour savoir quoi faire le jour J.</li>
+              <li><b>Réduire les risques :</b> mises à jour, double authentification, droits limités, sensibilisation au phishing.</li>
+              <li><b>Réagir en cas d’attaque :</b> isoler les machines touchées du réseau, prévenir les responsables et ne pas éteindre les preuves.</li>
             </ul>
           </div>
         </details>
@@ -397,29 +395,8 @@ section{padding:80px 0}
     </div>
 
     <div class="block">
-      <h3 class="sub-title reveal">Lien avec mon stage</h3>
-      <p class="sub-lead reveal">Pourquoi j’ai choisi ce sujet.</p>
-      <article class="card reveal">
-        <div class="card-top"><span class="tag">Mai – juin 2026</span><span class="tag tag-g">Stage 1re année</span></div>
-        <h3>BNP Paribas Personal Finance</h3>
-        <p>Pendant mon stage au sein d’une équipe IT de BNP Paribas Personal Finance à Levallois-Perret, j’ai découvert le fonctionnement informatique d’une banque : création et suivi de tickets sur Jira, gestion du réseau et développement d’une API basique.</p>
-        <details class="more">
-          <summary>Ce que ce stage a apporté à ma veille</summary>
-          <div class="more-body">
-            <h4>Ce que j’ai observé</h4>
-            <p>Dans une banque, la sécurité est présente partout : accès contrôlés, procédures strictes et suivi de chaque demande par ticket. J’ai compris que les données des clients sont un enjeu majeur.</p>
-            <h4>Ce que je surveille depuis</h4>
-            <p>Les arnaques qui visent les clients des banques, les nouvelles règles européennes sur la sécurité des paiements et les conseils de l’ANSSI et de Cybermalveillance.gouv.fr.</p>
-            <h4>Ce que ça change pour moi</h4>
-            <p>En tant que futur technicien, je dois savoir reconnaître une tentative de phishing, accompagner les utilisateurs et appliquer les règles de sécurité au quotidien.</p>
-          </div>
-        </details>
-      </article>
-    </div>
-
-    <div class="block">
       <h3 class="sub-title reveal">Lien avec mes projets</h3>
-      <p class="sub-lead reveal">Un projet concret qui m’a sensibilisé à la sécurité réseau.</p>
+      <p class="sub-lead reveal">Un projet concret qui m’a sensibilisé à la sécurité d’une infrastructure.</p>
       <article class="card reveal">
         <div class="card-top"><span class="tag">Janvier – avril 2026</span><span class="tag tag-g">IPSSI</span></div>
         <h3>Projet laboratoire GSB</h3>
@@ -427,12 +404,12 @@ section{padding:80px 0}
         <details class="more">
           <summary>Ce que ce projet a apporté à ma veille</summary>
           <div class="more-body">
-            <h4>Ce que j’ai découvert</h4>
-            <p>En configurant moi-même des routeurs et des switchs, j’ai compris qu’une seule erreur de configuration ou un équipement pas à jour peut ouvrir une porte d’entrée sur tout le réseau.</p>
+            <h4>Ce que j’ai compris</h4>
+            <p>Une infrastructure demande beaucoup de travail à construire : configurations, adressage, tests. Si un rançongiciel chiffre tout et qu’il n’y a pas de sauvegarde, tout ce travail et toutes les données sont perdus.</p>
             <h4>Ce que je surveille depuis</h4>
-            <p>Les avis de sécurité du CERT-FR, notamment les failles qui touchent les équipements réseau.</p>
+            <p>Les attaques par rançongiciel en France, les recommandations de l’ANSSI sur la sauvegarde et les bonnes pratiques pour protéger un système d’information.</p>
             <h4>Ce que ça change pour moi</h4>
-            <p>Appliquer les correctifs, changer les mots de passe par défaut et documenter chaque configuration.</p>
+            <p>Sauvegarder les configurations des équipements, appliquer la règle 3-2-1 et tester la restauration.</p>
           </div>
         </details>
       </article>
@@ -444,7 +421,7 @@ section{padding:80px 0}
       <div class="steps">
         <div class="card step reveal">
           <h3>Sources fiables</h3>
-          <p>Sources officielles (ANSSI, CERT-FR, Cybermalveillance.gouv.fr, Banque de France), médias spécialisés (01net, Le Monde Informatique) et créateurs comme Micode sur YouTube et TikTok.</p>
+          <p>Sources officielles (ANSSI, CERT-FR, Cybermalveillance.gouv.fr), médias spécialisés (LeMagIT, IT-Connect, Le Monde Informatique) et créateurs comme Micode sur YouTube et TikTok.</p>
         </div>
         <div class="card step reveal">
           <h3>Alertes automatiques</h3>
@@ -459,17 +436,17 @@ section{padding:80px 0}
           <p>Chaque mois, une fiche par sujet : le fait, la date, la source et l’impact pour un technicien systèmes et réseaux.</p>
         </div>
       </div>
-      <p class="kw reveal"><b>Mots-clés surveillés :</b> <span>phishing bancaire</span> · <span>authentification forte</span> · <span>fuite de données</span> · <span>arnaque faux conseiller</span> · <span>DSP3</span> · <span>malware Android</span></p>
+      <p class="kw reveal"><b>Mots-clés surveillés :</b> <span>rançongiciel</span> · <span>ransomware</span> · <span>sauvegarde 3-2-1</span> · <span>cyberattaque France</span> · <span>ANSSI</span> · <span>restauration</span></p>
 
       <div class="reveal" style="margin-top:22px">
         <details class="acc">
           <summary><span class="n">→</span>Exemple : d’une alerte à une fiche de veille<span class="plus">+</span></summary>
           <div class="acc-body">
             <ul>
-              <li><b>1. Alerte reçue (septembre 2026) :</b> Google Alertes « phishing bancaire » m’envoie un article sur une arnaque visant les clients du Crédit Agricole.</li>
-              <li><b>2. Vérification :</b> l’information est confirmée par plusieurs médias spécialisés, qui précisent que les systèmes de la banque n’ont pas été piratés.</li>
-              <li><b>3. Analyse :</b> les pirates ont imité les mails de la banque pour voler les identifiants des clients. C’est l’humain qui a été piégé, pas la machine.</li>
-              <li><b>4. Fiche rédigée :</b> impact retenu pour un technicien : sensibiliser les utilisateurs et généraliser l’authentification forte.</li>
+              <li><b>1. Alerte reçue (septembre 2026) :</b> Google Alertes « rançongiciel » m’envoie le Cyberhebdo de LeMagIT, qui recense les attaques de la semaine.</li>
+              <li><b>2. Vérification :</b> je retrouve les mêmes attaques dans d’autres médias et je vérifie les chiffres sur le site de l’ANSSI.</li>
+              <li><b>3. Analyse :</b> je compare deux victimes : une association française qui a perdu 20 ans de données, et des communes portugaises qui ont redémarré vite grâce à leurs sauvegardes.</li>
+              <li><b>4. Fiche rédigée :</b> impact retenu pour un technicien : la sauvegarde hors ligne et testée fait toute la différence.</li>
             </ul>
           </div>
         </details>
@@ -481,72 +458,72 @@ section{padding:80px 0}
       <p class="sub-lead reveal">Ce que j’ai retenu ces derniers mois.</p>
       <div class="news">
         <article class="card reveal">
-          <div class="card-top"><span class="tag">Septembre 2026</span></div>
-          <h3>Phishing massif contre les clients du Crédit Agricole</h3>
-          <p>Une campagne de faux mails imitant la banque a piégé plus de 900 clients.</p>
+          <div class="card-top"><span class="tag">10 sept. 2026</span></div>
+          <h3>Une association française perd 20 ans de données</h3>
+          <p>La Maison du souvenir de Maillé a été victime d’un rançongiciel qui a chiffré l’ensemble de ses données.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Vers le 22 septembre, de faux mails imitant le Crédit Agricole ont redirigé les clients vers un faux site. Selon les médias, 912 personnes y ont saisi leurs identifiants et 83 paiements frauduleux ont été recensés. Les systèmes de la banque, eux, n’ont pas été piratés.</p>
+              <p>Toutes ses données ont été chiffrées : photographies, documents de recherche et témoignages recueillis depuis plus de vingt ans. Les pirates ont demandé 5 000 dollars en bitcoins, et des adresses mail d’adhérents ont aussi fuité.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>Même la meilleure sécurité technique ne suffit pas si l’utilisateur donne lui-même ses identifiants.</p>
+              <p>Les petites structures sont aussi visées, et sans sauvegarde hors ligne, elles risquent de tout perdre.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Sensibiliser les utilisateurs à reconnaître un faux mail et vérifier l’adresse d’un site avant de se connecter.</p>
+              <p>Même une petite structure doit avoir une sauvegarde déconnectée du réseau.</p>
             </div>
           </details>
-          <div class="src">Sources : <a href="https://gener.fr/actualites-8448-cyberattaques-bancaires-ce-qui-sest-vraiment-passe-en-septembre-2026-et-comment-proteger-sa-carte-et-son-smartphone" target="_blank" rel="noopener">Gener</a> · <a href="https://argentauquotidien.com/cyberattaque-bancaire-900-victimes-piegees-par-une-operation-de-phishing/" target="_blank" rel="noopener">Argent au quotidien</a></div>
+          <div class="src">Source : <a href="https://www.lemagit.fr/actualites/366650654/Cyberhebdo-du-18-septembre-2026" target="_blank" rel="noopener">LeMagIT</a></div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="tag">Septembre 2026</span></div>
-          <h3>Des malwares Android volent les codes bancaires</h3>
-          <p>Deux logiciels malveillants, RemControl et RatHat, ciblent les applications de plus de 30 banques.</p>
+          <div class="card-top"><span class="tag">15 sept. 2026</span></div>
+          <h3>Des communes sauvées par leurs sauvegardes</h3>
+          <p>Au Portugal, un groupement de dix communes a été attaqué, mais l’impact est resté limité.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Ces malwares, souvent installés à la demande d’un faux conseiller, affichent de fausses fenêtres par-dessus l’application bancaire pour voler les identifiants, le code PIN et les codes reçus par SMS.</p>
+              <p>Le serveur de messagerie a été isolé et une seule commune a été temporairement privée de mails. Les sauvegardes et le dispositif de sécurité ont fonctionné.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>Ils montrent que les pirates cherchent à contourner l’authentification forte en volant directement les codes sur le téléphone.</p>
+              <p>C’est l’exemple inverse du précédent : une bonne préparation transforme une catastrophe en simple incident.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>N’autoriser que les applications officielles sur les téléphones professionnels et rappeler qu’une banque ne demande jamais d’installer une application par téléphone.</p>
+              <p>Isoler vite la machine touchée et pouvoir restaurer grâce à des sauvegardes testées.</p>
             </div>
           </details>
-          <div class="src">Source : <a href="https://gener.fr/actualites-8448-cyberattaques-bancaires-ce-qui-sest-vraiment-passe-en-septembre-2026-et-comment-proteger-sa-carte-et-son-smartphone" target="_blank" rel="noopener">Gener</a></div>
+          <div class="src">Source : <a href="https://www.lemagit.fr/actualites/366650654/Cyberhebdo-du-18-septembre-2026" target="_blank" rel="noopener">LeMagIT</a></div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="tag">2025 – 2026</span></div>
-          <h3>DSP3 : de nouvelles règles contre la fraude</h3>
-          <p>L’Europe prépare la suite de la DSP2 pour mieux protéger les clients des banques.</p>
+          <div class="card-top"><span class="tag">2026</span></div>
+          <h3>Le bilan de l’ANSSI sur les rançongiciels</h3>
+          <p>Dans son Panorama de la cybermenace 2025, l’ANSSI recense 128 attaques par rançongiciel en France.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Un accord politique a été trouvé fin 2025 sur la DSP3. Elle étend l’authentification forte, permet aux banques de partager des informations sur les IBAN frauduleux et oblige la banque à rembourser le client quand un escroc s’est fait passer pour un de ses employés. Depuis octobre 2025, la banque vérifie déjà que le nom du bénéficiaire correspond à l’IBAN avant un virement.</p>
+              <p>128 compromissions par rançongiciel ont été traitées en 2025, contre 141 en 2024. Les PME, TPE et ETI représentent 48 % des victimes, devant les collectivités (11 %) et les établissements de santé (8 %). Le groupe le plus actif s’appelle Qilin.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>Les banques deviennent responsables de mieux protéger leurs clients contre les arnaques.</p>
+              <p>Près d’une victime sur deux est une petite ou moyenne entreprise, souvent moins bien protégée.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Les systèmes informatiques des banques doivent évoluer pour appliquer ces nouvelles règles.</p>
+              <p>Les entreprises qui recrutent des techniciens en alternance sont justement celles qui sont le plus visées.</p>
             </div>
           </details>
-          <div class="src">Source : <a href="https://www.revue-banque.fr/metiers/paiements/dsp3-et-rsp-une-mise-a-jour-necessaire-pour-lutter-contre-la-fraude-KI25963977" target="_blank" rel="noopener">Revue Banque</a></div>
+          <div class="src">Sources : <a href="https://www.digitemis.com/panorama-cybermenace-anssi-bilan-menace-france/" target="_blank" rel="noopener">Digitemis</a> · <a href="https://www.channelnews.fr/bilan-annuel-lanssi-publie-son-panorama-de-la-cybermenace-2025-155530" target="_blank" rel="noopener">ChannelNews</a></div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="tag">Septembre 2026</span></div>
-          <h3>Fuite de données à la DGFiP</h3>
-          <p>Les données d’environ 700 000 personnes ont été volées au fisc avec de simples identifiants volés.</p>
+          <div class="card-top"><span class="tag">Guide ANSSI</span></div>
+          <h3>Les fondamentaux de la sauvegarde selon l’ANSSI</h3>
+          <p>L’ANSSI a publié un guide qui explique comment bien sauvegarder un système d’information.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
-              <h4>Ce qui s’est passé</h4>
-              <p>Selon le rapport de l’ANSSI, les attaquants ont utilisé de vrais identifiants d’agents, volés au préalable. Sans double authentification, ils se sont connectés normalement et l’attaque n’a pas été détectée.</p>
+              <h4>Ce qu’il dit</h4>
+              <p>Appliquer la règle 3-2-1, garder au moins une sauvegarde hors ligne (la bande magnétique reste la plus sûre), utiliser des sauvegardes immuables, et surtout tester régulièrement la restauration.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>Ces données (identité, IBAN) servent ensuite à des arnaques bancaires très crédibles.</p>
+              <p>C’est la référence officielle en France : elle sert de base à toutes les bonnes pratiques.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Imposer la double authentification partout et surveiller les connexions inhabituelles.</p>
+              <p>Rédiger une procédure de restauration et la tester, pas seulement lancer des sauvegardes.</p>
             </div>
           </details>
-          <div class="src">Sources : <a href="https://www.itforbusiness.fr/dgfip-lanssi-pointe-de-trop-nombreux-angles-morts-107867" target="_blank" rel="noopener">IT for Business</a> · <a href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-006/" target="_blank" rel="noopener">CERT-FR</a></div>
+          <div class="src">Source : <a href="https://www.it-connect.fr/les-fondamentaux-pour-la-sauvegarde-dun-si-dapres-lanssi/" target="_blank" rel="noopener">IT-Connect</a></div>
         </article>
       </div>
     </div>
