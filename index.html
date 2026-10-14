@@ -335,111 +335,91 @@ section{padding:80px 0}
     </div>
 
     <div class="veille-theme reveal">
-      <div class="exp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.5"/></svg></div>
-      <div><small>Mon sujet de veille</small><b>L’IA générative en entreprise : usages, risques et sécurité</b></div>
+      <div class="exp-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div><small>Mon sujet de veille</small><b>La cybersécurité dans le secteur bancaire : phishing et authentification forte</b></div>
     </div>
 
     <div class="block">
-      <h3 class="sub-title reveal">Comprendre l’IA générative</h3>
-      <p class="lead-txt reveal">L’<b>IA générative</b> est une intelligence artificielle qui <b>crée du contenu nouveau</b> (texte, images, code, voix, vidéo) à partir d’une simple demande écrite en langage courant, appelée <b>prompt</b>. Les outils les plus connus sont ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Copilot (Microsoft) et Le Chat du français Mistral AI.</p>
+      <h3 class="sub-title reveal">Comprendre le sujet</h3>
+      <p class="lead-txt reveal">Les banques gèrent l’argent et les données de millions de clients : ce sont des <b>cibles privilégiées</b> pour les cybercriminels. Les attaques les plus fréquentes ne visent pas les serveurs de la banque mais <b>ses clients et ses salariés</b>, en les piégeant pour leur voler leurs identifiants. Pour se défendre, les banques s’appuient surtout sur <b>l’authentification forte</b> et la sensibilisation.</p>
 
       <div class="reveal">
         <details class="acc">
-          <summary><span class="n">01</span>Comment ça marche ?<span class="plus">+</span></summary>
+          <summary><span class="n">01</span>Pourquoi les banques sont-elles autant visées ?<span class="plus">+</span></summary>
           <div class="acc-body">
-            <p>Ces outils reposent sur des <b>grands modèles de langage</b> (LLM, pour <i>Large Language Model</i>).</p>
             <ul>
-              <li><b>Entraînement :</b> le modèle lit des milliards de textes (livres, sites web, code) et apprend quels mots ont tendance à se suivre. Il découpe le texte en petits morceaux appelés <b>tokens</b>.</li>
-              <li><b>Génération :</b> pour répondre, il prédit le token suivant le plus probable, puis le suivant, et ainsi de suite. Il ne « sait » rien : il calcule des probabilités, ce qui explique qu’il puisse se tromper avec assurance.</li>
-              <li><b>Ajustement :</b> des humains notent ensuite ses réponses pour le rendre plus utile et pour qu’il refuse les demandes dangereuses.</li>
-              <li><b>Multimodalité :</b> les modèles récents comprennent aussi les images, l’audio et les documents.</li>
-              <li><b>Agents :</b> c’est la grande évolution de 2025-2026. L’IA ne se contente plus de répondre : elle <b>enchaîne des actions seule</b> (naviguer sur le web, ouvrir des fichiers, lancer des commandes).</li>
+              <li><b>L’argent :</b> un compte piraté permet de faire des virements frauduleux immédiatement.</li>
+              <li><b>Les données :</b> IBAN, identité, revenus… ces informations se revendent ou servent à de nouvelles arnaques.</li>
+              <li><b>La confiance :</b> une banque piratée perd la confiance de ses clients, ce qui est très grave pour elle.</li>
             </ul>
-            <div class="note"><b>Exemple :</b> si je demande « écris un script PowerShell qui liste les comptes Active Directory inactifs depuis 90 jours », l’IA produit le script en quelques secondes. Je dois ensuite le relire et le tester avant de m’en servir.</div>
+            <div class="note"><b>À retenir :</b> les pirates attaquent souvent l’humain plutôt que la machine, car c’est plus simple que de percer les défenses d’une banque.</div>
           </div>
         </details>
         <details class="acc">
-          <summary><span class="n">02</span>À quoi ça sert pour un technicien ?<span class="plus">+</span></summary>
+          <summary><span class="n">02</span>Le phishing, c’est quoi ?<span class="plus">+</span></summary>
           <div class="acc-body">
+            <p>Le <b>phishing</b> (ou hameçonnage) consiste à se faire passer pour un organisme de confiance, comme une banque, pour pousser la victime à donner ses informations.</p>
             <ul>
-              <li><b>Documentation :</b> rédiger des procédures, des comptes rendus d’intervention et des guides utilisateurs.</li>
-              <li><b>Scripts :</b> écrire, expliquer ou corriger des scripts PowerShell ou Bash pour automatiser des tâches (création de comptes, sauvegardes).</li>
-              <li><b>Diagnostic :</b> interpréter un message d’erreur, un journal d’événements ou une configuration réseau.</li>
-              <li><b>Support N1 :</b> des chatbots répondent aux questions simples des utilisateurs (mot de passe oublié, imprimante), ce qui libère du temps aux techniciens.</li>
-              <li><b>Apprentissage :</b> se faire expliquer une notion (DNS, VLAN, GPO) avec des exemples adaptés à son niveau.</li>
+              <li><b>Par mail :</b> un faux mail de la banque avec un lien vers un faux site qui ressemble au vrai.</li>
+              <li><b>Par SMS (smishing) :</b> « Votre compte est bloqué, cliquez ici ».</li>
+              <li><b>Par téléphone (vishing) :</b> un faux conseiller appelle et demande de valider une opération ou de donner un code.</li>
+              <li><b>Par application :</b> un faux logiciel installé sur le téléphone qui vole les codes reçus par SMS.</li>
             </ul>
+            <div class="note"><b>Les signes qui doivent alerter :</b> l’urgence, une adresse ou une URL bizarre, une demande de code ou de mot de passe. Une banque ne demande jamais ses codes par mail, SMS ou téléphone.</div>
           </div>
         </details>
         <details class="acc">
-          <summary><span class="n">03</span>Quels sont les risques ?<span class="plus">+</span></summary>
+          <summary><span class="n">03</span>L’authentification forte, comment ça marche ?<span class="plus">+</span></summary>
           <div class="acc-body">
+            <p>Depuis la directive européenne <b>DSP2</b>, les banques doivent utiliser une <b>authentification forte</b> pour les connexions et les paiements en ligne. Il faut prouver son identité avec <b>au moins deux éléments différents</b> parmi trois catégories :</p>
             <ul>
-              <li><b>Hallucinations :</b> l’IA peut inventer une commande, une option ou une source qui n’existe pas, tout en paraissant sûre d’elle.</li>
-              <li><b>Fuite de données :</b> ce qu’on colle dans un outil public peut sortir de l’entreprise. En 2023, des ingénieurs de Samsung ont ainsi transmis du code confidentiel à ChatGPT.</li>
-              <li><b>Shadow AI :</b> des salariés utilisent des IA non validées par la DSI, sans contrôle sur les données envoyées.</li>
-              <li><b>Injection de prompt :</b> des instructions cachées dans une page web ou un e-mail peuvent détourner un agent IA et lui faire exécuter des actions non voulues.</li>
-              <li><b>Attaques renforcées :</b> les pirates s’en servent aussi, pour du phishing sans fautes, des deepfakes vocaux (fausse voix d’un dirigeant) ou du code malveillant.</li>
+              <li><b>Ce que je sais :</b> un mot de passe ou un code.</li>
+              <li><b>Ce que je possède :</b> mon téléphone, qui reçoit une notification ou un code.</li>
+              <li><b>Ce que je suis :</b> mon empreinte digitale ou mon visage.</li>
             </ul>
+            <div class="note"><b>Exemple :</b> quand je paie en ligne, je dois valider le paiement dans l’application de ma banque avec mon empreinte. C’est le principe du <b>3D Secure</b>. Même si un pirate vole ma carte, il ne peut pas valider le paiement sans mon téléphone.</div>
           </div>
         </details>
         <details class="acc">
-          <summary><span class="n">04</span>Comment l’utiliser en sécurité ?<span class="plus">+</span></summary>
+          <summary><span class="n">04</span>Comment une banque se protège-t-elle ?<span class="plus">+</span></summary>
           <div class="acc-body">
             <ul>
-              <li><b>Une charte d’utilisation</b> qui dit quels outils sont autorisés et pour quoi faire.</li>
-              <li><b>Des outils validés par la DSI</b>, en version entreprise, où les données ne servent pas à entraîner le modèle.</li>
-              <li><b>Aucune donnée sensible</b> dans un prompt : pas de mots de passe, de données clients ni de documents internes.</li>
-              <li><b>Tout vérifier</b> : relire et tester ce que produit l’IA dans un environnement de test avant la production.</li>
-              <li><b>Le moindre privilège pour les agents</b> : un agent IA ne doit avoir accès qu’à ce dont il a besoin, et ses actions doivent être journalisées.</li>
-              <li><b>Sensibiliser les utilisateurs</b> aux nouvelles formes de phishing et de deepfakes.</li>
+              <li><b>Double authentification (MFA)</b> pour les clients et pour les salariés.</li>
+              <li><b>Sensibilisation</b> régulière des salariés et des clients aux arnaques.</li>
+              <li><b>Surveillance</b> des connexions et des opérations inhabituelles (heure, pays, montant).</li>
+              <li><b>Gestion des incidents :</b> chaque problème est suivi dans un outil de tickets pour être traité et tracé.</li>
+              <li><b>Mises à jour</b> régulières des postes et des équipements réseau pour corriger les failles.</li>
+              <li><b>Vérification du bénéficiaire :</b> depuis octobre 2025, la banque vérifie que le nom du bénéficiaire correspond bien à l’IBAN avant un virement.</li>
             </ul>
-            <div class="note"><b>Référence :</b> l’ANSSI a publié des recommandations de sécurité pour les systèmes d’IA générative, et la CNIL des fiches pratiques sur l’IA et les données personnelles.</div>
           </div>
         </details>
       </div>
     </div>
 
     <div class="block">
-      <h3 class="sub-title reveal">Méthodologie d’alerte</h3>
-      <p class="sub-lead reveal">Ma méthode en 4 étapes, appliquée à l’IA générative.</p>
-      <div class="steps">
-        <div class="card step reveal">
-          <h3>Sources fiables</h3>
-          <p>Sources officielles (ANSSI, CNIL, CERT-FR), médias spécialisés (Le Monde Informatique, Blog du Modérateur) et blogs des éditeurs d’IA (OpenAI, Anthropic, Mistral AI).</p>
-        </div>
-        <div class="card step reveal">
-          <h3>Alertes automatiques</h3>
-          <p>Google Alertes et flux RSS regroupés dans Feedly : chaque nouvel article sur mes mots-clés arrive directement à moi.</p>
-        </div>
-        <div class="card step reveal">
-          <h3>Tri et vérification</h3>
-          <p>L’IA attire beaucoup de rumeurs. Je recoupe chaque information avec au moins deux sources, dont une officielle.</p>
-        </div>
-        <div class="card step reveal">
-          <h3>Synthèse</h3>
-          <p>Chaque mois, une fiche par sujet : le fait, la date, la source et l’impact pour un technicien systèmes et réseaux.</p>
-        </div>
-      </div>
-      <p class="kw reveal"><b>Mots-clés surveillés :</b> <span>IA générative</span> · <span>LLM</span> · <span>agents IA</span> · <span>Mistral AI</span> · <span>AI Act</span> · <span>deepfake</span> · <span>phishing IA</span></p>
-
-      <div class="reveal" style="margin-top:22px">
-        <details class="acc">
-          <summary><span class="n">→</span>Exemple : d’une alerte à une fiche de veille<span class="plus">+</span></summary>
-          <div class="acc-body">
-            <ul>
-              <li><b>1. Alerte reçue (3 sept. 2026) :</b> Google Alertes « IA générative » m’envoie un article : « Nvidia rachète Hugging Face ».</li>
-              <li><b>2. Vérification :</b> l’information est confirmée par Silicon.fr et Maddyness, avec le montant et les conditions du rachat.</li>
-              <li><b>3. Analyse :</b> la principale plateforme de modèles d’IA open source, fondée par des Français, passe sous le contrôle d’un géant américain des puces. Cela crée un risque de dépendance pour les entreprises qui l’utilisent.</li>
-              <li><b>4. Fiche rédigée :</b> impact retenu pour un technicien : savoir où sont hébergés les modèles utilisés et prévoir une solution de repli, par exemple un modèle hébergé en interne.</li>
-            </ul>
+      <h3 class="sub-title reveal">Lien avec mon stage</h3>
+      <p class="sub-lead reveal">Pourquoi j’ai choisi ce sujet.</p>
+      <article class="card reveal">
+        <div class="card-top"><span class="tag">Mai – juin 2026</span><span class="tag tag-g">Stage 1re année</span></div>
+        <h3>BNP Paribas Personal Finance</h3>
+        <p>Pendant mon stage au sein d’une équipe IT de BNP Paribas Personal Finance à Levallois-Perret, j’ai découvert le fonctionnement informatique d’une banque : création et suivi de tickets sur Jira, gestion du réseau et développement d’une API basique.</p>
+        <details class="more">
+          <summary>Ce que ce stage a apporté à ma veille</summary>
+          <div class="more-body">
+            <h4>Ce que j’ai observé</h4>
+            <p>Dans une banque, la sécurité est présente partout : accès contrôlés, procédures strictes et suivi de chaque demande par ticket. J’ai compris que les données des clients sont un enjeu majeur.</p>
+            <h4>Ce que je surveille depuis</h4>
+            <p>Les arnaques qui visent les clients des banques, les nouvelles règles européennes sur la sécurité des paiements et les conseils de l’ANSSI et de Cybermalveillance.gouv.fr.</p>
+            <h4>Ce que ça change pour moi</h4>
+            <p>En tant que futur technicien, je dois savoir reconnaître une tentative de phishing, accompagner les utilisateurs et appliquer les règles de sécurité au quotidien.</p>
           </div>
         </details>
-      </div>
+      </article>
     </div>
 
     <div class="block">
       <h3 class="sub-title reveal">Lien avec mes projets</h3>
-      <p class="sub-lead reveal">Comment un projet concret a orienté ma veille.</p>
+      <p class="sub-lead reveal">Un projet concret qui m’a sensibilisé à la sécurité réseau.</p>
       <article class="card reveal">
         <div class="card-top"><span class="tag">Janvier – avril 2026</span><span class="tag tag-g">IPSSI</span></div>
         <h3>Projet laboratoire GSB</h3>
@@ -450,82 +430,120 @@ section{padding:80px 0}
             <h4>Ce que j’ai découvert</h4>
             <p>En configurant moi-même des routeurs et des switchs, j’ai compris qu’une seule erreur de configuration ou un équipement pas à jour peut ouvrir une porte d’entrée sur tout le réseau.</p>
             <h4>Ce que je surveille depuis</h4>
-            <p>Je suis les avis de sécurité du CERT-FR, notamment les failles qui touchent les équipements réseau comme ceux de Cisco, et la façon dont l’IA générative change les attaques et la défense des réseaux.</p>
+            <p>Les avis de sécurité du CERT-FR, notamment les failles qui touchent les équipements réseau.</p>
             <h4>Ce que ça change pour moi</h4>
-            <p>Je fais le lien entre ma veille et la pratique : appliquer les correctifs, changer les mots de passe par défaut et documenter chaque configuration.</p>
+            <p>Appliquer les correctifs, changer les mots de passe par défaut et documenter chaque configuration.</p>
           </div>
         </details>
       </article>
     </div>
 
     <div class="block">
-      <h3 class="sub-title reveal">Dernières innovations et bouleversements</h3>
-      <p class="sub-lead reveal">Ce que j’ai retenu de septembre et octobre 2026.</p>
+      <h3 class="sub-title reveal">Méthodologie d’alerte</h3>
+      <p class="sub-lead reveal">Ma méthode en 4 étapes.</p>
+      <div class="steps">
+        <div class="card step reveal">
+          <h3>Sources fiables</h3>
+          <p>Sources officielles (ANSSI, CERT-FR, Cybermalveillance.gouv.fr, Banque de France), médias spécialisés (01net, Le Monde Informatique) et créateurs comme Micode sur YouTube et TikTok.</p>
+        </div>
+        <div class="card step reveal">
+          <h3>Alertes automatiques</h3>
+          <p>Des Google Alertes et des flux RSS regroupés dans Feedly : chaque nouvel article sur mes mots-clés arrive directement à moi.</p>
+        </div>
+        <div class="card step reveal">
+          <h3>Tri et vérification</h3>
+          <p>Une vidéo ou un post me sert à découvrir une info. Je la recoupe ensuite avec au moins deux sources, dont une officielle.</p>
+        </div>
+        <div class="card step reveal">
+          <h3>Synthèse</h3>
+          <p>Chaque mois, une fiche par sujet : le fait, la date, la source et l’impact pour un technicien systèmes et réseaux.</p>
+        </div>
+      </div>
+      <p class="kw reveal"><b>Mots-clés surveillés :</b> <span>phishing bancaire</span> · <span>authentification forte</span> · <span>fuite de données</span> · <span>arnaque faux conseiller</span> · <span>DSP3</span> · <span>malware Android</span></p>
+
+      <div class="reveal" style="margin-top:22px">
+        <details class="acc">
+          <summary><span class="n">→</span>Exemple : d’une alerte à une fiche de veille<span class="plus">+</span></summary>
+          <div class="acc-body">
+            <ul>
+              <li><b>1. Alerte reçue (septembre 2026) :</b> Google Alertes « phishing bancaire » m’envoie un article sur une arnaque visant les clients du Crédit Agricole.</li>
+              <li><b>2. Vérification :</b> l’information est confirmée par plusieurs médias spécialisés, qui précisent que les systèmes de la banque n’ont pas été piratés.</li>
+              <li><b>3. Analyse :</b> les pirates ont imité les mails de la banque pour voler les identifiants des clients. C’est l’humain qui a été piégé, pas la machine.</li>
+              <li><b>4. Fiche rédigée :</b> impact retenu pour un technicien : sensibiliser les utilisateurs et généraliser l’authentification forte.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3 class="sub-title reveal">Dernières actualités</h3>
+      <p class="sub-lead reveal">Ce que j’ai retenu ces derniers mois.</p>
       <div class="news">
         <article class="card reveal">
-          <div class="card-top"><span class="tag">28 sept. 2026</span></div>
-          <h3>Les agents IA deviennent autonomes</h3>
-          <p>Les IA ne se contentent plus de répondre : elles agissent seules sur les systèmes. Leur sécurité devient un enjeu majeur.</p>
+          <div class="card-top"><span class="tag">Septembre 2026</span></div>
+          <h3>Phishing massif contre les clients du Crédit Agricole</h3>
+          <p>Une campagne de faux mails imitant la banque a piégé plus de 900 clients.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Nvidia a présenté l’Open Agent Safety Platform, qui peut limiter l’accès d’un agent aux fichiers, au réseau et aux identifiants, et bloquer une action en temps réel. Aux États-Unis, le président de la FTC a affirmé que l’entreprise qui déploie un agent reste responsable de ce qu’il fait.</p>
+              <p>Vers le 22 septembre, de faux mails imitant le Crédit Agricole ont redirigé les clients vers un faux site. Selon les médias, 912 personnes y ont saisi leurs identifiants et 83 paiements frauduleux ont été recensés. Les systèmes de la banque, eux, n’ont pas été piratés.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>Un agent qui peut agir peut aussi faire des dégâts : supprimer des fichiers, envoyer des données ou être manipulé par une injection de prompt.</p>
+              <p>Même la meilleure sécurité technique ne suffit pas si l’utilisateur donne lui-même ses identifiants.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Gérer un agent IA comme un compte utilisateur : droits minimum, comptes dédiés, journalisation des actions.</p>
+              <p>Sensibiliser les utilisateurs à reconnaître un faux mail et vérifier l’adresse d’un site avant de se connecter.</p>
             </div>
           </details>
-          <div class="src">Source : <a href="https://ia-info.fr/09-octobre-2026-ce-qu-il-faut-retenir-sur-l-intelligence-artificielle.html" target="_blank" rel="noopener">IA-info</a></div>
+          <div class="src">Sources : <a href="https://gener.fr/actualites-8448-cyberattaques-bancaires-ce-qui-sest-vraiment-passe-en-septembre-2026-et-comment-proteger-sa-carte-et-son-smartphone" target="_blank" rel="noopener">Gener</a> · <a href="https://argentauquotidien.com/cyberattaque-bancaire-900-victimes-piegees-par-une-operation-de-phishing/" target="_blank" rel="noopener">Argent au quotidien</a></div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="tag">3 sept. 2026</span></div>
-          <h3>Nvidia rachète Hugging Face</h3>
-          <p>La grande plateforme de l’IA open source, fondée par des Français, est rachetée pour environ 12,9 milliards de dollars.</p>
+          <div class="card-top"><span class="tag">Septembre 2026</span></div>
+          <h3>Des malwares Android volent les codes bancaires</h3>
+          <p>Deux logiciels malveillants, RemControl et RatHat, ciblent les applications de plus de 30 banques.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Hugging Face héberge des centaines de milliers de modèles d’IA en accès libre. Nvidia, leader mondial des puces pour l’IA, la rachète. Elle garde sa marque, et le rachat doit être finalisé en 2027, sous réserve des autorisations.</p>
+              <p>Ces malwares, souvent installés à la demande d’un faux conseiller, affichent de fausses fenêtres par-dessus l’application bancaire pour voler les identifiants, le code PIN et les codes reçus par SMS.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>L’IA open source permettait aux entreprises de ne pas dépendre des grands éditeurs. Ce rachat concentre encore plus le secteur.</p>
+              <p>Ils montrent que les pirates cherchent à contourner l’authentification forte en volant directement les codes sur le téléphone.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Savoir d’où viennent les modèles utilisés, et pouvoir en héberger en interne pour garder la maîtrise des données.</p>
+              <p>N’autoriser que les applications officielles sur les téléphones professionnels et rappeler qu’une banque ne demande jamais d’installer une application par téléphone.</p>
             </div>
           </details>
-          <div class="src">Source : <a href="https://www.silicon.fr/business-1367/nvidia-confirme-le-rachat-de-hugging-face-228953" target="_blank" rel="noopener">Silicon.fr</a></div>
+          <div class="src">Source : <a href="https://gener.fr/actualites-8448-cyberattaques-bancaires-ce-qui-sest-vraiment-passe-en-septembre-2026-et-comment-proteger-sa-carte-et-son-smartphone" target="_blank" rel="noopener">Gener</a></div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="tag">2 août 2026</span></div>
-          <h3>AI Act : place aux sanctions</h3>
-          <p>Le règlement européen sur l’IA entre dans sa phase de sanctions, et la Commission commence ses contrôles.</p>
+          <div class="card-top"><span class="tag">2025 – 2026</span></div>
+          <h3>DSP3 : de nouvelles règles contre la fraude</h3>
+          <p>L’Europe prépare la suite de la DSP2 pour mieux protéger les clients des banques.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Depuis le 2 août 2026, les sanctions de l’AI Act sont applicables. Il faut informer les personnes quand elles échangent avec une IA, et marquer les contenus générés. Fin août, la Commission a envoyé des demandes d’information à plus de 30 fournisseurs de modèles d’IA.</p>
+              <p>Un accord politique a été trouvé fin 2025 sur la DSP3. Elle étend l’authentification forte, permet aux banques de partager des informations sur les IBAN frauduleux et oblige la banque à rembourser le client quand un escroc s’est fait passer pour un de ses employés. Depuis octobre 2025, la banque vérifie déjà que le nom du bénéficiaire correspond à l’IBAN avant un virement.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>L’Europe est la première à encadrer l’IA par une loi. Les entreprises doivent désormais prouver qu’elles l’utilisent correctement.</p>
+              <p>Les banques deviennent responsables de mieux protéger leurs clients contre les arnaques.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Recenser les outils d’IA utilisés dans l’entreprise, comme on recense le parc informatique, et vérifier leur conformité.</p>
+              <p>Les systèmes informatiques des banques doivent évoluer pour appliquer ces nouvelles règles.</p>
             </div>
           </details>
-          <div class="src">Source : <a href="https://www.donneespersonnelles.fr/actualite-ia-2026" target="_blank" rel="noopener">Données Personnelles</a></div>
+          <div class="src">Source : <a href="https://www.revue-banque.fr/metiers/paiements/dsp3-et-rsp-une-mise-a-jour-necessaire-pour-lutter-contre-la-fraude-KI25963977" target="_blank" rel="noopener">Revue Banque</a></div>
         </article>
         <article class="card reveal">
-          <div class="card-top"><span class="tag">Sept. 2026</span></div>
+          <div class="card-top"><span class="tag">Septembre 2026</span></div>
           <h3>Fuite de données à la DGFiP</h3>
-          <p>Les données d’environ 700 000 personnes ont été volées au fisc, avec une attaque simple que personne n’a vue venir.</p>
+          <p>Les données d’environ 700 000 personnes ont été volées au fisc avec de simples identifiants volés.</p>
           <details class="more">
             <summary>Lire l’analyse</summary>
             <div class="more-body">
               <h4>Ce qui s’est passé</h4>
-              <p>Selon le rapport de l’ANSSI, les attaquants ont utilisé des identifiants légitimes d’agents, volés au préalable. Sans double authentification, ils se sont connectés normalement et l’attaque n’a pas été détectée. L’État a lancé l’opération REACTIV le 1er septembre pour réagir plus vite aux fuites.</p>
+              <p>Selon le rapport de l’ANSSI, les attaquants ont utilisé de vrais identifiants d’agents, volés au préalable. Sans double authentification, ils se sont connectés normalement et l’attaque n’a pas été détectée.</p>
               <h4>Pourquoi c’est important</h4>
-              <p>Avec l’IA générative, les e-mails de phishing qui volent ces identifiants sont plus crédibles que jamais.</p>
+              <p>Ces données (identité, IBAN) servent ensuite à des arnaques bancaires très crédibles.</p>
               <h4>Impact pour un technicien SISR</h4>
-              <p>Imposer la double authentification (MFA), surveiller les connexions inhabituelles et sensibiliser les utilisateurs.</p>
+              <p>Imposer la double authentification partout et surveiller les connexions inhabituelles.</p>
             </div>
           </details>
           <div class="src">Sources : <a href="https://www.itforbusiness.fr/dgfip-lanssi-pointe-de-trop-nombreux-angles-morts-107867" target="_blank" rel="noopener">IT for Business</a> · <a href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-006/" target="_blank" rel="noopener">CERT-FR</a></div>
